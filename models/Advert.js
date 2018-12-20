@@ -16,6 +16,18 @@ const advertSchema = moongoose.Schema({
 //Model creation
 const Advert = moongoose.model('Advert',advertSchema);
 
-//Model exports
 
+
+ //TEST to save an advert
+ 
+/*const advert = new Advert({name: "Bicycle",
+                            sale: true,
+                            price: 230.15,
+                            photo: "images/advert/bicyle",
+                            tags: ["lifestyle" , "motor"]});
+advert.save();*/
+ 
+
+
+//Model exports
 module.exports = Advert;
