@@ -14,8 +14,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//getting mongooseConnection
+//getting mongooseConnection and model definitions
 require('./lib/mongooseConnection');
+require('./models/Advert');
 
 
 app.use(logger('dev'));
