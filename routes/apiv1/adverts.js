@@ -33,14 +33,14 @@ router.get('/', (req,res,next) => {
  * Create an advert in the database
  */
 router.post('/',async (req,res,next)=> {
-    try{
+    try {
         //Request data of the new Advert
-        const AdvertData =req.body;
+        const advertData =req.body;
         //Create new Advert
-        const Advert = new Advert(AdvertData);
+        const advert = new Advert(advertData);
         //Save advert in the database
-        await Advert.save();
-        res.json({success: true});
+        await advert.save();
+        res.json({success: true,result: advert});
     }catch(err){
         next(err);
         return;

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "cross-env DEBUG=nodepop:* nodemon"
+    "dev": "cross-env DEBUG=nodepop:* nodemon",
+    "install_db": "node ./database/install_db"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -14,6 +15,7 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "mongoose": "^5.4.0",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.9"
   }
 }
