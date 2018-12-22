@@ -6,12 +6,13 @@ const moongoose = require('mongoose');
 
 const advertSchema = moongoose.Schema({
 
-    name: String,
-    sale: Boolean,
-    price: Number,
-    photo: String,
-    tags: [String]
+    name: {type: String,index: true},
+    sale: {type: Boolean,index: true},
+    price: { type: Number,index: true},
+    photo: { type: String, index: true},
+    tags: {type:[String],index: true},
 });
+
 
 //Model creation
 const Advert = moongoose.model('Advert',advertSchema);

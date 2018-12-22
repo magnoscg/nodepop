@@ -17,6 +17,7 @@ app.set('view engine', 'ejs');
 //getting mongooseConnection and model definitions
 require('./lib/mongooseConnection');
 require('./models/Advert');
+require('./models/User');
 
 
 app.use(logger('dev'));

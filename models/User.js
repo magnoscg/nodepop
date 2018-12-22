@@ -5,8 +5,8 @@ const moongoose = require('mongoose');
 //User Model definition
 const userSchema = moongoose.Schema({
 
-    name: String,
-    email: String,
+    name: {type: String,index: true},
+    email: {type: String,index: true},
     pass: String
 });
 
