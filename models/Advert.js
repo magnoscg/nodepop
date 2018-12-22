@@ -17,7 +17,6 @@ const advertSchema = moongoose.Schema({
 const Advert = moongoose.model('Advert',advertSchema);
 
 
-
  //TEST to save an advert
  
 /*const advert = new Advert({name: "Bicycle",
