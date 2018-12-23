@@ -5,10 +5,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var i18n = require('i18n');
 
 
 var app = express();
+
+//Internationalization module
+app.use(i18n.init);
+
+i18n.configure({
+  locals: ['en','es'],
+  directory: __dirname + '/locals'
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

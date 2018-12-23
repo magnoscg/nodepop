@@ -21,8 +21,8 @@ router.post('/authenticate', async (req,res,next)=> {
         const passwordDecrypted = await bcrypt.compare(password,user.password);
 
         //
-        if(!user || !passwordDecrypted){
-            res.json({success: false, error: 'Invalid credentials'});
+        if(!user || !passwordDecrypted){ //res.__ (translations in locals)
+            res.json({success: false, error: res.__('invalidCredentials')});
             return;
         }
         
@@ -58,8 +58,8 @@ router.post('/register',async (req,res,next)=> {
         
         
         //if exists email, the user will not been register
-        if(findUser){
-            res.json({success: false , error: 'The email is already registered'});
+        if(findUser){                          //res.__ (translations in locals)
+            res.json({success: false , error: res.__('Email already Registered')});
             return;
         }
         //Create new Advert
