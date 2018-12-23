@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "cluster": "node ./bin/cluster",
     "dev": "cross-env DEBUG=nodepop:* nodemon",
     "install_db": "node ./database/install_db"
   },
