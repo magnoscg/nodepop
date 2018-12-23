@@ -23,14 +23,23 @@ mongoose.connect('mongodb://localhost/nodepop',{ useNewUrlParser: true });
 mongoose.connection.once('open',() => {
     console.log('*********  Connection established  ************\n');
 
-    //remove all collections first
+    //remove all collections and users first
 
     Advert.deleteMany({}, err => {
         if(err){
             console.log('Collections have not been removed.');
             return err;
         };
-        console.log('Older Collections removed.\n');
+        console.log('Older Collections have been removed.\n');
+    });
+
+    User.deleteMany({}, err => {
+        if(err){
+            console.log('Users have not been removed.');
+            return err;
+        };
+        console.log('Older Users have been removed.\n');
+        
     });
 
     saveExampleCollections(exampleAdverts);

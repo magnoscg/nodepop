@@ -13,6 +13,62 @@
             "price": 50.00,
             "photo": "images/adverts/iphone.jpg",
             "tags": ["lifestyle", "mobile"]
+        },
+        {
+            "name": "iPhone X",
+            "sale": true,
+            "price": 950.00,
+            "photo": "images/adverts/iphonex.jpg",
+            "tags": ["lifestyle", "mobile"]
+        },
+        {
+            "name": "xbox 360",
+            "sale": false,
+            "price": 100.00,
+            "photo": "images/adverts/xbox360.jpg",
+            "tags": ["lifestyle"]
+        },
+        {
+            "name": "Xiaomi Scooter",
+            "sale": true,
+            "price": 250.30,
+            "photo": "images/adverts/scooter.jpg",
+            "tags": ["lifestyle", "motor","work"]
+        },
+        {
+            "name": "Mac",
+            "sale": true,
+            "price": 1550.00,
+            "photo": "images/adverts/mac.jpg",
+            "tags": ["lifestyle", "work"]
+        },
+        {
+            "name": "nokia 3310",
+            "sale": true,
+            "price": 50.00,
+            "photo": "images/adverts/nokia.jpg",
+            "tags": ["work", "mobile"]
+        },
+        {
+            "name": "HTC ONE",
+            "sale": false,
+            "price": 10.00,
+            "photo": "images/adverts/htc.jpg",
+            "tags": ["mobile"]
+        },
+        {
+            "name": "Logitech mx500",
+            "sale": true,
+            "price": 60.00,
+            "photo": "images/adverts/mouse.jpg",
+            "tags": ["lifestyle", "mobile", "work"]
+        },
+        {
+            "name": "Airbus 320",
+            "sale": false,
+            "price": 10000000.00,
+            "photo": "images/adverts/airbus.jpg",
+            "tags": ["motor", "work"]
         }
     ]
 }
