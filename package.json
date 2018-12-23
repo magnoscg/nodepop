@@ -8,12 +8,15 @@
     "install_db": "node ./database/install_db"
   },
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "cookie-parser": "~1.4.3",
     "cross-env": "^5.2.0",
     "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.0",
     "morgan": "~1.9.0",
     "nodemon": "^1.18.9"

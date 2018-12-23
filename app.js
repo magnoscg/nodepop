@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
  * API routes
  */
 app.use('/apiv1/adverts', require('./routes/apiv1/adverts'));
-
+app.use('/apiv1/users',require('./routes/apiv1/users'));
 
 /**
  * Web Aplication routes

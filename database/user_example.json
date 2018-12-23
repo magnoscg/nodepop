@@ -3,6 +3,6 @@
     {
         "name": "test",
         "email": "user@example.com",
-        "pass": "1234"
+        "password": "1234"
    }
 }

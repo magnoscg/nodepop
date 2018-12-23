@@ -8,6 +8,10 @@ const router = express.Router();
 //Loading Mongoose to use Advert Model
 
 const Advert = require('../../models/Advert');
+const jwtAuthMiddleware = require('../../lib/jwtAuthMiddleware');
+
+router.use(jwtAuthMiddleware());
+
 
 /**
  * GET /adverts 
@@ -102,7 +106,7 @@ router.get('/', (req,res,next) => {
     });
 });
 
-//Post to create new Adverts
+//Post used to create new Adverts
 /**
  * 
  * POST /adverts
