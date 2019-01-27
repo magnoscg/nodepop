@@ -8,6 +8,16 @@ Nodepop API - Practice of an application coded in Node.js, Express and mongoDB.
 
 *APi to buy and sell second-hand products.*
 ***
+
+## DEVOPS
+
+Web Server: nginx (http://54.226.218.58/)
+
+Web server: express (https://www.hispacode.com/) Using nginx to serving static Files
+
+Nodepop Api GET example: [Nodepop](https://nodepop.hispacode.com/apiv1/adverts?jwttoken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWM0Y2I4ZTM1MjA4OWIwZWQwMjBlY2ZiIiwiaWF0IjoxNTQ4NTMyMDYxLCJleHAiOjE1NDg3MDQ4NjF9.XPbU9mhVCVwWIr2uSs2uFkeYESaf5znfc2lVdUjC9L0)
+
+***
 ## Requirements
 
 **Need a MongodB server and start it.**
