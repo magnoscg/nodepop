@@ -12,11 +12,58 @@ Nodepop API - Practice of an application coded in Node.js, Express and mongoDB.
 
 **Need a MongodB server and start it.**
 
+Install Mongo database: [How to install MongoDB](https://docs.mongodb.com/manual/administration/install-community/)
+
+Linux:
+
+``` sudo service mongod start```
+
+Mac Os:
+
 To Start the Mongodb server, you need to run this command in Mongodb folder:
 
 ```shell
 bin/mongod --dbpath ./data/db --directoryperdb
 ```
+
+## Environment variables
+
+Configure the enviroments variables with ```dotenv``` renaming the file **.env.example** to **.env** changing the **JWT_SECRET** for you want.
+
+Configure your CONNECTION to mongo database with environment variable **DATABASE_URI**
+
+if you want to access database with authentication, you need to create an user first, to have access to that database.
+For example:
+
+```
+use nodepop
+db.createUser(
+  {
+    user: "user",
+    pwd: "password",
+    roles: [ { role: "readWrite", db: "nodepop" }]
+  }
+)
+```
+To enable authentication for mongo you have to add this lines at mongod.conf (Linux,Mac OS) or mongo.cfg(windows)
+
+<pre>
+systemLog:
+ destination: file
+ path: /usr/local/var/log/mongodb/mongo.log
+ logAppend: true
+storage:
+ dbPath: /usr/local/var/mongodb
+net:
+ bindIp: 127.0.0.1
+<b>security:</b>
+<b>authorization: enabled</b>
+</pre>
+
+Now, set env DATABASE_URI at .env file.
+
+````DATABASE_URI=mongodb://user:password@localhost/nodepop````
+
 ***
 ## Install
 
@@ -42,8 +89,7 @@ This API have 2 Security methods:
 
 **JWT Web Token** - ```Used to authenticate the users with a token.```
 
-Configure the enviroments variables with ```dotenv``` renaming the file **.env.example** to **.env** changing the **JWT_SECRET** for you want.
-***
+
 ## Users
 
 The schema of the user is this:
